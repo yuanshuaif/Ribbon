@@ -1,0 +1,24 @@
+server:
+    port: 8087
+#    servlet:
+#      context-path: /api-ribbon
+    # rabbitmq的连接信息
+#    rabbitmq:
+#        host: localhost
+#        port: 5672
+#        username: yuanshuaif
+#        password: Aa123456
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://yuanshuai:dk@localhost:8082/eureka/
+spring:
+    application:
+        name: service-ribbon
+    #zipkin服务的地址
+    zipkin:
+        base-url: http://localhost:8080
+    # 100%发送消息
+    sleuth:
+        sampler:
+            probability: 1
